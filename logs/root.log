@@ -1,0 +1,114 @@
+2021-05-11 15:21:33 Slf4JLogger.java DEBUG Using SLF4J as the default logging framework
+2021-05-11 15:21:33 Slf4JLogger.java DEBUG -Dio.netty.eventLoopThreads: 16
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG java.nio.Buffer.address: unavailable
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG Platform: Windows
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG Java version: 8
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.noUnsafe: false
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG sun.misc.Unsafe: unavailable
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG maxDirectMemory: 2107637760 bytes (maybe)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.noJavassist: false
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG Javassist: unavailable
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.tmpdir: C:\Users\10091\AppData\Local\Temp (java.io.tmpdir)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.noPreferDirect: true
+2021-05-11 15:21:34 Slf4JLogger.java INFO Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.noKeySetOptimization: false
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.selectorAutoRebuildThreshold: 512
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.processId: 9392 (auto-detected)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.machineId: d4:3b:04:ff:fe:ce:cb:97 (auto-detected)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.initialSeedUniquifier: 0xe030ed026015da56 (took 17 ms)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.numHeapArenas: 8
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.numDirectArenas: 8
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.pageSize: 8192
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxOrder: 11
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.chunkSize: 16777216
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.tinyCacheSize: 512
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.smallCacheSize: 256
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.normalCacheSize: 64
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.cacheTrimInterval: 8192
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.type: pooled
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG -Dio.netty.threadLocalDirectBufferSize: 65536
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2021-05-11 15:21:34 Slf4JLogger.java DEBUG \proc\sys\net\core\somaxconn: 200 (non-existent)
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG Using SLF4J as the default logging framework
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.eventLoopThreads: 16
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG java.nio.Buffer.address: unavailable
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG Platform: Windows
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG Java version: 8
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.noUnsafe: false
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG sun.misc.Unsafe: unavailable
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG maxDirectMemory: 2107637760 bytes (maybe)
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.noJavassist: false
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG Javassist: unavailable
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.tmpdir: C:\Users\10091\AppData\Local\Temp (java.io.tmpdir)
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.noPreferDirect: true
+2021-05-11 15:29:02 Slf4JLogger.java INFO Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.noKeySetOptimization: false
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.selectorAutoRebuildThreshold: 512
+2021-05-11 15:29:02 Slf4JLogger.java DEBUG -Dio.netty.processId: 4628 (auto-detected)
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.machineId: d4:3b:04:ff:fe:ce:cb:97 (auto-detected)
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.initialSeedUniquifier: 0xa8a644907834a965 (took 17 ms)
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.numHeapArenas: 8
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.numDirectArenas: 8
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.pageSize: 8192
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxOrder: 11
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.chunkSize: 16777216
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.tinyCacheSize: 512
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.smallCacheSize: 256
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.normalCacheSize: 64
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.cacheTrimInterval: 8192
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.allocator.type: pooled
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.threadLocalDirectBufferSize: 65536
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.leakDetectionLevel: simple
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.recycler.maxCapacity: 262144
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.leakDetectionLevel: simple
+2021-05-11 15:29:03 Slf4JLogger.java DEBUG -Dio.netty.recycler.maxCapacity: 262144
+2021-05-11 15:29:03 EchoServerHandler.java DEBUG channelRead: 
+2021-05-11 15:29:03 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 15:29:03 EchoServerHandler.java DEBUG channelReadComplete: 
+2021-05-11 15:29:03 EchoClientHandler.java DEBUG channelRead: 
+2021-05-11 15:29:03 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 15:29:03 EchoClientHandler.java DEBUG channelReadComplete: 
+2021-05-11 15:31:14 EchoServerHandler.java DEBUG channelRead: 
+2021-05-11 15:31:14 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 15:31:14 EchoServerHandler.java DEBUG channelReadComplete: 
+2021-05-11 15:31:14 EchoClientHandler.java DEBUG channelRead: 
+2021-05-11 15:31:14 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 15:31:14 EchoClientHandler.java DEBUG channelReadComplete: 
+2021-05-11 15:31:37 EchoClientHandler.java DEBUG channelReadComplete: 
+2021-05-11 15:31:37 EchoClientHandler.java DEBUG exceptionCaught: 
+2021-05-11 15:31:48 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 15:31:48 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:07:04 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:07:05 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:12:50 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:12:50 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:15:05 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:15:05 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:19:28 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:19:28 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:19:47 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:19:47 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:20:19 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:20:19 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:21:30 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:21:30 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:21:57 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:21:57 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:22:44 EchoServerHandler.java INFO Received msg from client: Hello Server!
+2021-05-11 16:22:44 EchoClientHandler.java INFO Received msg from server: Hello Server!-Server
+2021-05-11 16:22:45 EchoServerHandler.java INFO Received msg from client: 3213
+2021-05-11 16:22:45 EchoClientHandler.java INFO Received msg from server: 3213-Server
+2021-05-11 16:22:50 EchoServerHandler.java INFO Received msg from client: 你好啊
+2021-05-11 16:22:50 EchoClientHandler.java INFO Received msg from server: 你好啊-Server
+2021-05-11 16:22:58 EchoServerHandler.java INFO Received msg from client: 好什么好
+2021-05-11 16:22:58 EchoClientHandler.java INFO Received msg from server: 好什么好-Server
+2021-05-11 16:23:03 EchoServerHandler.java INFO Received msg from client: 一点都不好
+2021-05-11 16:23:03 EchoClientHandler.java INFO Received msg from server: 一点都不好-Server
+2021-05-11 16:23:07 EchoServerHandler.java INFO Received msg from client: 想下班
+2021-05-11 16:23:07 EchoClientHandler.java INFO Received msg from server: 想下班-Server

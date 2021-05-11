@@ -83,11 +83,13 @@ public class EchoSever {
                             socketChannel.pipeline().addLast(new EchoServerHandler());
                         }
                     });
-
+            //绑定端口，同步等待成功
             ChannelFuture future = bootstrap.bind(port).sync();
 
+            //等待服务端监听端口的关闭
             future.channel().closeFuture().sync();
         } finally {
+            //退出，释放线程资源
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
