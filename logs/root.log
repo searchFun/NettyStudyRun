@@ -112,3 +112,30 @@
 2021-05-11 16:23:03 EchoClientHandler.java INFO Received msg from server: 一点都不好-Server
 2021-05-11 16:23:07 EchoServerHandler.java INFO Received msg from client: 想下班
 2021-05-11 16:23:07 EchoClientHandler.java INFO Received msg from server: 想下班-Server
+2021-05-11 20:19:29 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:19:29 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:19:29 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 20:19:51 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:19:58 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:20:08 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 20:20:35 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:20:35 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:20:35 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 20:21:04 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:21:04 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:21:05 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 20:23:52 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:23:52 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:23:52 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 20:23:58 NioClient.java DEBUG onReadable: 可读
+2021-05-11 20:25:26 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 20:25:26 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 20:25:26 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 22:31:44 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 22:31:44 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 22:31:44 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 22:31:52 NioClient.java DEBUG onReadable: 可读
+2021-05-11 22:32:07 NioClient.java DEBUG onAcceptable: 连接成功
+2021-05-11 22:32:07 NioServer.java DEBUG onAcceptable: 收到连接
+2021-05-11 22:32:07 NioServer.java DEBUG onReadable: 收到读事件
+2021-05-11 22:32:14 NioClient.java DEBUG onReadable: 可读
