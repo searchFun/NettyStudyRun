@@ -139,3 +139,91 @@
 2021-05-11 22:32:07 NioServer.java DEBUG onAcceptable: 收到连接
 2021-05-11 22:32:07 NioServer.java DEBUG onReadable: 收到读事件
 2021-05-11 22:32:14 NioClient.java DEBUG onReadable: 可读
+2021-05-12 17:41:58 EchoServerHandler.java DEBUG channelReadComplete: 
+2021-05-12 17:41:58 EchoServerHandler.java DEBUG exceptionCaught: 
+2021-05-12 17:43:21 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:43:48 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:43:51 TimeServerHandler.java DEBUG channelActive: 有连接
+2021-05-12 17:44:03 TimeServerHandler.java DEBUG channelActive: 有连接
+2021-05-12 17:52:20 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:54:27 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:54:35 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 17:54:35 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 17:54:36 TimeServerHandler.java DEBUG channelActive: 写数据动作已做完
+2021-05-12 17:54:36 TimeServerHandler.java DEBUG operationComplete: 数据写完了
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG Using SLF4J as the default logging framework
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.eventLoopThreads: 16
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG java.nio.Buffer.address: unavailable
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG Platform: Windows
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG Java version: 8
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.noUnsafe: false
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG sun.misc.Unsafe: unavailable
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG maxDirectMemory: 2107637760 bytes (maybe)
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.noJavassist: false
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG Javassist: unavailable
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.tmpdir: C:\Users\10091\AppData\Local\Temp (java.io.tmpdir)
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.noPreferDirect: true
+2021-05-12 17:56:33 Slf4JLogger.java INFO Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.noKeySetOptimization: false
+2021-05-12 17:56:33 Slf4JLogger.java DEBUG -Dio.netty.selectorAutoRebuildThreshold: 512
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.processId: 14804 (auto-detected)
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.machineId: d4:3b:04:ff:fe:ce:cb:97 (auto-detected)
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.initialSeedUniquifier: 0x25cce3c0f41ee098 (took 14 ms)
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.numHeapArenas: 8
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.numDirectArenas: 8
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.pageSize: 8192
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxOrder: 11
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.chunkSize: 16777216
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.tinyCacheSize: 512
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.smallCacheSize: 256
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.normalCacheSize: 64
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.cacheTrimInterval: 8192
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.allocator.type: pooled
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG -Dio.netty.threadLocalDirectBufferSize: 65536
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2021-05-12 17:56:34 Slf4JLogger.java DEBUG \proc\sys\net\core\somaxconn: 200 (non-existent)
+2021-05-12 17:56:34 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:57:13 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:58:31 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:59:02 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 17:59:32 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:01:21 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:01:21 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:01:21 TimeServerHandler.java DEBUG channelActive: 写数据动作已做完
+2021-05-12 18:01:21 TimeServerHandler.java DEBUG operationComplete: 数据写完了
+2021-05-12 18:02:02 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:02:21 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:02:26 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:02:26 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:02:26 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:02:26 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:02:42 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:02:42 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:02:42 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:02:42 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:04:59 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:05:17 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:05:17 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:05:17 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:05:17 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:08:25 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:08:25 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:08:25 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:08:25 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:08:38 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:08:42 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:08:42 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:08:42 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:08:42 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:08:52 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:08:52 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:08:52 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:08:52 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-12 18:09:08 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-12 18:09:10 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-12 18:09:10 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-12 18:09:10 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-12 18:09:10 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
