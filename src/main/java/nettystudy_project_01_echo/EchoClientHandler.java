@@ -1,4 +1,4 @@
-package nettystudy_project1;
+package nettystudy_project_01_echo;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
