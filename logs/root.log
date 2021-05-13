@@ -248,3 +248,17 @@
 2021-05-12 20:54:41 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
 2021-05-12 20:54:41 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
 2021-05-12 20:54:41 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-13 16:46:02 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-13 16:46:08 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-13 16:46:08 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-13 16:46:08 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-13 16:46:08 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-13 16:46:24 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-13 16:46:24 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-13 16:46:24 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-13 16:46:24 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
+2021-05-13 17:01:18 TimeServer.java DEBUG start: 服务启动成功！
+2021-05-13 17:01:27 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-05-13 17:01:27 TimeServerHandler.java DEBUG channelActive: 准备调用写数据动作
+2021-05-13 17:01:27 TimeServerHandler.java DEBUG channelActive: 写数据动作已完成
+2021-05-13 17:01:27 TimeServerHandler.java DEBUG operationComplete: 这里数据才真正的写完了
