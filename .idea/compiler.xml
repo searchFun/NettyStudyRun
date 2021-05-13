@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="NettyStart" />
         <module name="NettyStudy" />
+        <module name="NettyStudyRun" />
       </profile>
     </annotationProcessing>
   </component>

@@ -196,8 +196,8 @@ public class TimeServer {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        TimeServer timeServer = new TimeServer(8080);
-        timeServer.start();
+        TimeServer webProxyServer = new TimeServer(8080);
+        webProxyServer.start();
     }
 }
 ```
@@ -417,27 +417,4 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
 ![image-20210512205708524](.\images\timeServer.png)
 
 ![image-20210512210008421](.\images\timeClient.png)
-
-## 四、Netty 主要组件
-
-### 4.1 主要组件
-
-- Bootstrap && ServerBootstrap （引导、启动）
-- EventLoop && EventLoopGroup  
-- ByteBuf
-- Channel
-- ChannelHandler
-- ChannelFuture
-- ChannelPipeline
-- ChannelHandlerContext
-
-### 4.2 Bootstrap && ServerBootstrap
-
-### 4.3 EventLoop && EventLoopGroup
-
-<img src=".\images\eventloop" alt="image-20210513142047110" style="zoom: 67%;" />
-
-
-
-## 五、Netty 项目-网络代理
 
