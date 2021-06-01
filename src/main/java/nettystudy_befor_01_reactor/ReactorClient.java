@@ -1,6 +1,5 @@
-package nettystudy_befor_00_nio;
+package nettystudy_befor_01_reactor;
 
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayOutputStream;
@@ -10,17 +9,15 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
 @Slf4j
-public class NioClient {
+public class ReactorClient {
     String host;
     int port;
 
-    public NioClient(String host, int port) {
+    public ReactorClient(String host, int port) {
         this.host = host;
         this.port = port;
     }
@@ -109,7 +106,7 @@ public class NioClient {
 
 
     public static void main(String[] args) throws IOException {
-        NioClient nioClient = new NioClient("localhost", 8080);
-        nioClient.start();
+        ReactorClient reactorClient = new ReactorClient("localhost", 8080);
+        reactorClient.start();
     }
 }

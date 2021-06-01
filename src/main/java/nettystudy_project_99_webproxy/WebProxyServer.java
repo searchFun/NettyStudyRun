@@ -1,4 +1,4 @@
-package nettystudy_project_03_webproxy;
+package nettystudy_project_99_webproxy;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,7 +9,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-import nettystudy_project_02_timeserver.TimeServerHandler;
 
 @Slf4j
 public class WebProxyServer {

@@ -11,18 +11,16 @@ import java.nio.charset.StandardCharsets;
 @Slf4j
 public class EchoServerHandler extends ChannelHandlerAdapter {
 
+    int counter = 0;
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         log.debug("channelRead: ");
+        String body = (String) msg;
+        log.info("This is {} times receive client : [{}]", ++counter, body);
+        body += "$_";
 
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] req = new byte[buf.readableBytes()];
-        buf.readBytes(req);
-        String rec = new String(req, StandardCharsets.UTF_8);
-        log.info("Received msg from client: {}", rec);
-
-        String responseMsg = rec + "-Server";
-        ByteBuf resp = Unpooled.copiedBuffer(responseMsg.getBytes(StandardCharsets.UTF_8));
+        ByteBuf resp = Unpooled.copiedBuffer(body.getBytes());
         ctx.write(resp);
     }
 

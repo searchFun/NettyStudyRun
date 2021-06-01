@@ -1,6 +1,5 @@
-package nettystudy_befor_00_nio;
+package nettystudy_befor_01_reactor;
 
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayOutputStream;
@@ -9,19 +8,15 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.Scanner;
 
 @Slf4j
-public class NioClient {
-    String host;
+public class ReactorServer {
     int port;
 
-    public NioClient(String host, int port) {
-        this.host = host;
+    public ReactorServer(int port) {
         this.port = port;
     }
 
@@ -29,13 +24,13 @@ public class NioClient {
         // 1、获取Selector选择器
         Selector selector = Selector.open();
         // 2、获取通道
-        SocketChannel socketChannel = SocketChannel.open();
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         // 3.设置为非阻塞
-        socketChannel.configureBlocking(false);
-        // 4、将通道注册到选择器上,并注册的操作为：“接收”操作
-        socketChannel.register(selector, SelectionKey.OP_CONNECT);
-        // 5、连接服务器
-        socketChannel.connect(new InetSocketAddress(host, port));
+        serverSocketChannel.configureBlocking(false);
+        // 4、绑定连接
+        serverSocketChannel.bind(new InetSocketAddress(port));
+        // 5、将通道注册到选择器上,并注册的操作为：“连接”操作
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         // 6、采用轮询的方式，查询获取“准备就绪”的注册过的操作
         while (selector.select() > 0) {
             // 7、获取当前选择器中所有注册的选择键（“已经准备就绪的操作”）
@@ -44,40 +39,31 @@ public class NioClient {
                 // 8、获取“准备就绪”的时间
                 SelectionKey selectedKey = selectedKeys.next();
                 // 9、判断key是具体的什么事件
-                if (selectedKey.isConnectable()) {
-                    onConnectable(selectedKey);
+                if (selectedKey.isAcceptable()) {
+                    // 10、处理就绪状态
+                    selectedKey.attach(serverSocketChannel.accept());
+                    onAcceptable(selectedKey);
                 } else if (selectedKey.isReadable()) {
+                    // 11、处理可读状态
                     onReadable(selectedKey);
                 }
-                // 15、移除选择键
+                // 12、移除选择键
                 selectedKeys.remove();
             }
         }
     }
 
-    private void onConnectable(SelectionKey selectionKey) throws IOException {
-        log.debug("onAcceptable: 连接成功");
-        // 1、获取该选择器上的“连接就绪”状态的通道
-        SocketChannel clientSocket = (SocketChannel) selectionKey.channel();
-        // 2、连接成功后需要将选择器设置为对该通道的读事件感兴趣（不然同样会无限循环）
-        if (clientSocket.finishConnect()) {
-            selectionKey.interestOps(SelectionKey.OP_READ);
-            sendMessage(clientSocket, "Hello Server!".getBytes());
-        }
-        new Thread(() -> {
-            Scanner scanner = new Scanner(System.in);
-            while (scanner.hasNext()) {
-                String s = scanner.nextLine();
-                try {
-                    sendMessage(clientSocket, s.getBytes());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+    public void onAcceptable(SelectionKey selectedKey) throws IOException {
+        log.debug("onAcceptable: 收到连接");
+        // 1.获取通道
+        SocketChannel socketChannel = (SocketChannel) selectedKey.attachment();
+        // 2、设置为非阻塞模式
+        socketChannel.configureBlocking(false);
+        // 3、将该通道注册到selector选择器上,并注册的操作为：“读”操作
+        socketChannel.register(selectedKey.selector(), SelectionKey.OP_READ);
     }
 
-    private void onReadable(SelectionKey selectedKey) throws IOException {
+    public void onReadable(SelectionKey selectedKey) throws IOException {
         log.debug("onReadable: 收到读事件");
         // 1、获取该选择器上的“读就绪”状态的通道
         SocketChannel socketChannel = (SocketChannel) selectedKey.channel();
@@ -96,7 +82,8 @@ public class NioClient {
             }
             //结果
             byte[] dataBytes = arrayOutputStream.toByteArray();
-            System.out.println("Rec from server: " + new String(dataBytes));
+            System.out.println("Rec from client: " + new String(dataBytes));
+            sendMessage(socketChannel, (new String(dataBytes) + "-server").getBytes());
         }
     }
 
@@ -107,9 +94,8 @@ public class NioClient {
         socketChannel.write(byteBuffer);
     }
 
-
     public static void main(String[] args) throws IOException {
-        NioClient nioClient = new NioClient("localhost", 8080);
-        nioClient.start();
+        ReactorServer server = new ReactorServer(8080);
+        server.start();
     }
 }

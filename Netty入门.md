@@ -202,34 +202,6 @@ public class TimeServer {
 }
 ```
 
-##### (1) 设置EvenLoop 线程组
-
-因为这里是服务器的部分，所以使用了2个EventLoopGroup ，boosGroup负责处理客户端连接的Accept连接，workGroup负责我们的工作任务，至于为什么要采用这样的模式，这个模式也就是Reactor模式，后面会详细介绍Reactor模式。
-
-##### (2) 创建Server的引导实例
-
-这里比较简单，就是新建了一个服务端的Bootstamp实例，什么都没有做，具体的配置等都在下面。
-
-##### (3) 配置BootStrap实例
-
-这里使用的多个多个点的这种方式配置(.group  .channel等等)，每一个再换一行，这样阅读看上去比较清晰，也避免了多个set set的调用，让代码看起来比较多。
-
-##### (4) 设置通道为Nio的服务器通道
-
-这里设置服务端的通道类型，NioServerSocketChannel  通过名字可以了解是采用Nio的Server版本的SocketChannel
-
-##### (5) 设置Socket参数
-
-这里是设置Socket的参数，这个部分不是Netty的，而是对底层Socket的配置。
-
-##### (6) 设置子Handler
-
-##### (7) 绑定端口
-
-##### (8) 等待服务器关闭
-
-##### (9) 关闭线程组
-
 #### 3.2.2 TimeServerHandler(服务器业务逻辑处理相关)
 
 =====[**TimeServerHandler.java**]=====
@@ -287,7 +259,17 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 }
 ```
 
+#### 3.2.3总结
 
+基础Netty的Server端，可以看到分为了TimeServer.java 与TimeServerHandler.java两个文件，实现了业务与服务器的解耦，让编码人员更加关注业务逻辑部分，达到高效率开发基于Nio的服务端。
+
+***TimeServer.java* **
+
+该文件主要为服务的启动以及一些配置，如Socket的配置，端口等服务器相关配置都在这个文件，可以简单理解为配置文件，并且该文件如没有特殊其他诉求，基本可以通用，只需要更换设置的childHandler即可。
+
+***TimeServerHandler.java***
+
+该文件为实际业务逻辑部分，如客户端连接，收到消息，出现异常等问题应当如何处理。
 
 ### 3.3创建TimeClient
 
@@ -357,24 +339,6 @@ public class TimeClient {
 }
 ```
 
-##### (1) 设置EvenLoop 线程组
-
-##### (2) 创建引导实例
-
-##### (3) 给引导设置group信息
-
-##### (4) 设置通道为Nio的通道
-
-##### (5) 设置Socket参数
-
-##### (6) 设置Handler
-
-##### (7) 连接远端
-
-##### (8) 等待通道关闭
-
-##### (9) 关闭线程组
-
 #### 3.3.2 TimeClientHandler()
 
 =====[**TimeClientHandler.java**]=====
@@ -412,9 +376,25 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
 }
 ```
 
+#### 3.3.3总结
+
+与Server端类似，Client端也分为了连接服务端的配置TimeClient.java与具体业务逻辑处理TimeClientHandler.java文件
+
+***TimeClient.java* **
+
+该文件主要是客户端连接服务端的
+
+***TimeServerHandler.java***
+
+该文件为实际业务逻辑部分，如客户端连接，收到消息，出现异常等问题应当如何处理。
+
 分别启动TimeServer.java TimeClient.java，结果如下：
 
 ![image-20210512205708524](.\images\timeServer.png)
 
 ![image-20210512210008421](.\images\timeClient.png)
+
+### 3.4 从Demo看Netty核心模块
+
+
 

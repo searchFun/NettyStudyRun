@@ -1,4 +1,4 @@
-package nettystudy_project_03_webproxy;
+package nettystudy_project_99_webproxy;
 
 import io.netty.channel.ChannelHandlerAdapter;
 

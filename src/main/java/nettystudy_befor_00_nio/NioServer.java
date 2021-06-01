@@ -2,10 +2,13 @@ package nettystudy_befor_00_nio;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Iterator;
 
 @Slf4j
@@ -42,9 +45,6 @@ public class NioServer {
                 } else if (selectedKey.isReadable()) {
                     // 11、处理可读状态
                     onReadable(selectedKey);
-                } else if (selectedKey.isWritable()) {
-                    // 12、处理写事件
-                    onWriteable(selectedKey);
                 }
                 // 12、移除选择键
                 selectedKeys.remove();
@@ -67,24 +67,30 @@ public class NioServer {
         // 1、获取该选择器上的“读就绪”状态的通道
         SocketChannel socketChannel = (SocketChannel) selectedKey.channel();
         // 2、读取数据
-        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-        int length = 0;
-        while ((length = socketChannel.read(byteBuffer)) > 0) {
-            byteBuffer.flip();
-            System.out.println(new String(byteBuffer.array(), 0, length));
-            byteBuffer.clear();
+        try (ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream()) {
+            //分配一个1024大小缓存buffer,避免重复分配
+            ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+            //读取到的长度
+            int readLength = 0;
+            //有读到内容
+            while ((readLength = socketChannel.read(byteBuffer)) != 0) {
+                //切换读模式
+                byteBuffer.flip();
+                arrayOutputStream.write(byteBuffer.array(), 0, readLength);
+                byteBuffer.clear();
+            }
+            //结果
+            byte[] dataBytes = arrayOutputStream.toByteArray();
+            System.out.println("Rec from client: " + new String(dataBytes));
+            sendMessage(socketChannel, (new String(dataBytes) + "-server").getBytes());
         }
     }
 
-    public void onWriteable(SelectionKey selectedKey) throws IOException {
-        log.debug("onWriteable: 收到写事件");
-        byte[] bytes = (byte[]) selectedKey.attachment();
-        SocketChannel channel = (SocketChannel) selectedKey.channel();
+    private void sendMessage(SocketChannel socketChannel, byte[] bytes) throws IOException {
         ByteBuffer byteBuffer = ByteBuffer.allocate(bytes.length);
         byteBuffer.put(bytes);
         byteBuffer.flip();
-        channel.write(byteBuffer);
-        selectedKey.interestOps(SelectionKey.OP_READ);
+        socketChannel.write(byteBuffer);
     }
 
     public static void main(String[] args) throws IOException {
