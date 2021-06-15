@@ -1,6 +1,5 @@
 package nettystudy_project_03_msgpack;
 
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +18,9 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         UserInfo[] infos = UserInfo();
-        Arrays.stream(infos).forEach(ctx::write);
+        for (int i = 0; i < infos.length; i++) {
+            ctx.write(infos[i]);
+        }
         ctx.flush();
     }
 
@@ -39,12 +40,10 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         log.info("Client receive the msgpack message : {{}}", msg);
-        ctx.write(msg);
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        ctx.flush();
     }
 
     @Override

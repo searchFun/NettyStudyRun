@@ -38,8 +38,8 @@ public class EchoClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast("msgpack decoder", new MsgpackDecoder());
-                            socketChannel.pipeline().addLast("msgpack encoder", new MsgpackEncoder());
+                            socketChannel.pipeline().addLast( new MsgpackDecoder());
+                            socketChannel.pipeline().addLast( new MsgpackEncoder());
                             socketChannel.pipeline().addLast(new EchoClientHandler(sendNumber));
                         }
                     });

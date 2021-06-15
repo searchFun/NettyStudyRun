@@ -12,6 +12,7 @@ import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
 import java.io.IOException;
+import java.util.Set;
 
 public class TimeClient {
     String ip;
@@ -24,6 +25,7 @@ public class TimeClient {
 
     public void start() throws InterruptedException, IOException {
         EventLoopGroup group = new NioEventLoopGroup();
+        Set<Character> set;
 
         try {
             Bootstrap bootstrap = new Bootstrap();

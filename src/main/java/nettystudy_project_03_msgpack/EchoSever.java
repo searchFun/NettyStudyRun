@@ -81,10 +81,8 @@ public class EchoSever {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-//                            ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
-//                            socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
-                            socketChannel.pipeline().addLast(new FixedLengthFrameDecoder(20));
-                            socketChannel.pipeline().addLast(new StringDecoder());
+                            socketChannel.pipeline().addLast( new MsgpackDecoder());
+                            socketChannel.pipeline().addLast( new MsgpackEncoder());
                             socketChannel.pipeline().addLast(new EchoServerHandler());
                         }
                     });

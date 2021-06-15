@@ -22132,3 +22132,70 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 2021-06-01 15:09:37 EchoClientHandler.java DEBUG channelRead: 
 2021-06-01 15:09:37 EchoClientHandler.java INFO This is 121 times receive from server: {elcome to Netty.$_$_}
 2021-06-01 15:09:37 EchoClientHandler.java DEBUG channelReadComplete: 
+2021-06-02 09:05:45 EchoClientHandler.java ERROR 
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at io.netty.buffer.PooledHeapByteBuf.setBytes(PooledHeapByteBuf.java:234)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:433)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:387)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2021-06-02 09:23:45 EchoClientHandler.java ERROR 
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at io.netty.buffer.PooledHeapByteBuf.setBytes(PooledHeapByteBuf.java:234)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:433)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:387)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2021-06-02 09:25:49 EchoServerHandler.java INFO Message from client : 72
+2021-06-02 09:25:49 EchoServerHandler.java INFO Message from client : 111
+2021-06-02 09:25:49 EchoServerHandler.java INFO Message from client : 44
+2021-06-02 09:37:27 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:38:52 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:39:32 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:39:32 EchoClientHandler.java INFO Client receive the msgpack message : {UserInfo{age=0, name='ABCDEFG --->0'}}
+2021-06-02 09:40:04 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:40:04 EchoClientHandler.java INFO Client receive the msgpack message : {UserInfo{age=0, name='ABCDEFG --->0'}}
+2021-06-02 09:40:43 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:41:06 EchoClientHandler.java INFO Client receive the msgpack message : {UserInfo{age=0, name='ABCDEFG --->0'}}
+2021-06-02 09:46:16 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-02 09:46:16 EchoClientHandler.java INFO Client receive the msgpack message : {UserInfo{age=0, name='ABCDEFG --->0'}}
+2021-06-02 09:46:53 EchoClientHandler.java DEBUG channelReadComplete: 
+2021-06-02 09:47:10 EchoServerHandler.java INFO Message from client : UserInfo{age=0, name='ABCDEFG --->0'}
+2021-06-10 15:24:47 TimeServer.java DEBUG start: 服务启动成功！
+2021-06-10 15:24:59 TimeServer.java DEBUG start: 服务启动成功！
+2021-06-10 15:25:14 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功
+2021-06-10 15:59:27 TimeServerHandler.java DEBUG exceptionCaught: 报错
+2021-06-11 11:51:37 TimeServer.java DEBUG start: 服务启动成功！
+2021-06-11 11:51:45 TimeServerHandler.java DEBUG channelActive: 有客户端连接成功

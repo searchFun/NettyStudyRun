@@ -390,7 +390,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
 
 分别启动TimeServer.java TimeClient.java，结果如下：
 
-![image-20210512205708524](.\images\timeServer.png)
+![image-20210512205708524](.\images\httpFileServer.png)
 
 ![image-20210512210008421](.\images\timeClient.png)
 
