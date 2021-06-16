@@ -13,10 +13,10 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 @Slf4j
-public class ReactorServer {
+public class NioReactorServer {
     int port;
 
-    public ReactorServer(int port) {
+    public NioReactorServer(int port) {
         this.port = port;
     }
 
@@ -95,7 +95,7 @@ public class ReactorServer {
     }
 
     public static void main(String[] args) throws IOException {
-        ReactorServer server = new ReactorServer(8080);
+        NioReactorServer server = new NioReactorServer(8080);
         server.start();
     }
 }

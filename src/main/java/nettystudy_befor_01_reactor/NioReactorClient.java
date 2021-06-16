@@ -13,11 +13,11 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 @Slf4j
-public class ReactorClient {
+public class NioReactorClient {
     String host;
     int port;
 
-    public ReactorClient(String host, int port) {
+    public NioReactorClient(String host, int port) {
         this.host = host;
         this.port = port;
     }
@@ -106,7 +106,7 @@ public class ReactorClient {
 
 
     public static void main(String[] args) throws IOException {
-        ReactorClient reactorClient = new ReactorClient("localhost", 8080);
-        reactorClient.start();
+        NioReactorClient nioReactorClient = new NioReactorClient("localhost", 8080);
+        nioReactorClient.start();
     }
 }

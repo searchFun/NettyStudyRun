@@ -1,9 +1,8 @@
 package nettystudy_core_bytebuf;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufAllocator;
-import io.netty.buffer.CompositeByteBuf;
-import io.netty.buffer.Unpooled;
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.*;
+import io.netty.channel.ChannelOption;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
@@ -64,5 +63,22 @@ public class ByteBufTypeTest {
             next.getBytes(next.readerIndex(), array);
             System.out.println(new String(array, StandardCharsets.UTF_8));
         }
+    }
+
+    @Test
+    public void pooledByteBuf(){
+        ByteBuf pooledBuf = PooledByteBufAllocator.DEFAULT.buffer();
+    }
+
+    @Test
+    public void unPooledByteBuf(){
+        ByteBuf unPooledBuf = UnpooledByteBufAllocator.DEFAULT.buffer();
+    }
+
+    @Test
+    public void defaultAllocator(){
+        ServerBootstrap bootstrap = new ServerBootstrap();
+        bootstrap.option(ChannelOption.ALLOCATOR,PooledByteBufAllocator.DEFAULT)
+                .childOption(ChannelOption.ALLOCATOR,UnpooledByteBufAllocator.DEFAULT);
     }
 }
